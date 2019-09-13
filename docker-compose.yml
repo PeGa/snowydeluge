@@ -1,0 +1,14 @@
+version: "2.4"
+
+services:
+  snowydeluge:
+    build: ./
+    image: snowydeluge:latest
+    ports:
+      # 58846 and 8112 should be private ports. Consider
+      # Replacing these definitions for something more suitable
+      # to you, i.e. 127.0.0.1:host_port:container_port
+      - "58846:58846" # Daemon remote port (i.e. for deluge-gtk)
+      - "8112:8112" # Web interface
+      - "53160:53160" # Incoming connections (this one should be public)
+    container_name: snowydeluge
