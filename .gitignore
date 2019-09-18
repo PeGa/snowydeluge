@@ -1,4 +1,4 @@
-./deluge-data/
-./deluge-data/*
-./deluge-config/
-./deluge-config/*
+deluge-data/
+deluge-data/*
+deluge-config/
+deluge-config/*
