@@ -12,3 +12,6 @@ services:
       - "8112:8112" # Web interface
       - "53160:53160" # Incoming connections (this one should be public)
     container_name: snowydeluge
+    volumes:
+      - ./deluge-config:/root/.config/deluge
+      - ./deluge-data:/storage
